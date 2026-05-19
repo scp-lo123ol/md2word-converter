@@ -1,0 +1,40 @@
+# 依赖目录 - 生产镜像需要复制 node_modules
+# **/node_modules  <- 已注释，生产构建需要打包依赖
+
+# 构建产物 - 不排除，需要复制到镜像
+# **/dist  <- 已注释，构建产物需要打包
+
+# 开发文件
+**/.git
+**/.gitignore
+**/*.md
+**/.env*
+
+# IDE 配置
+**/.idea
+**/.vscode
+**/*.swp
+**/*.swo
+
+# 临时文件
+**/*.log
+**/*.tmp
+**/temp
+**/.cache
+
+# Claude 配置（整个目录）
+.claude/
+
+# 测试文件
+**/test
+**/tests
+**/*.test.ts
+**/*.spec.ts
+
+# 不要忽略模板文件
+!backend/templates/
+!backend/templates/*.lua
+!backend/templates/*.py
+!backend/src/templates/
+!backend/src/templates/*.lua
+!backend/src/templates/*.docx

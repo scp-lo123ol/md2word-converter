@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+
+# Temp files
+*.tmp
+*.temp
+.claude/
+/.claude/
+
+# Large deployment files
+backend/apk/
+backend/bin/
+*.tar.gz
+update-final.tar.gz
+
+# Test outputs
+*.docx
+test-*.docx
+error-*.docx
+final.docx
+fixed-*.docx
+mermaid-*.docx

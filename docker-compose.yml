@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  md2word:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "14000:3001"
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+      - PANDOC_PATH=/usr/local/bin/pandoc
+      - MERMAID_RENDER_URL=https://your-mermaid-server.example.com/render
+    restart: unless-stopped
+    volumes:
+      - md2word-temp:/tmp/md2word
+
+volumes:
+  md2word-temp:
